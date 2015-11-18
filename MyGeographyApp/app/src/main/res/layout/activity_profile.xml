@@ -25,12 +25,12 @@
             />
         <ImageView
          android:id="@+id/emoji"
-         android:layout_width="160"
-         android:layout_height="70"
+         android:layout_width="160dp"
+         android:layout_height="70dp"
          android:src="@drawable/emoji"
          android:layout_alignBottom="@+id/boeing747"
          android:layout_centerHorizontal="true"
-         android
+
 
             />
     <ImageView
@@ -53,61 +53,69 @@
         android:textColor="#ff5722"
         />
 <ImageView
-    android:id="@+id/phonenum"
-    android:layout_width="80dp"
-    android:layout_height="60dp"
-    android:src="@drawable/phonenum"
-    android:layout_below="@id/email"
+        android:id="@+id/phonenum"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:src="@drawable/phonenum"
+        android:layout_below="@id/email"
     />
 <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignTop="@id/phonenum"
-    android:layout_alignBottom="@id/phonenum"
-    android:layout_aligntoRightOf="@id/phonenum"
-    android:layout_marginLeft="15dp"
-    android:gravity="center_horizontal"
-    android:text="Mob 07934561278"
-    android:textSize="26sp"
-    android:textColor="#ff1744"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/phonenum"
+        android:layout_alignBottom="@id/phonenum"
+        android:layout_toRightOf="@+id/phonenum"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_horizontal"
+        android:text="Mob 07934561278"
+        android:textSize="26sp"
+        android:textColor="#ff1744"
     />
 <ImageView
-    android:id="@+id/name"
-    android:layout_width="80dp"
-    android:layout_height="60dp"
-    android:src="@drawable/name"
-    android:layout_below="@id/phonenum"
-    />
+        android:id="@+id/name"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:src="@drawable/name"
+        android:layout_below="@id/phonenum" />
+
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignTop="@id/name"
     android:layout_alignBottom="@id/name"
-    android:layout_aligntoRightOf="@id/name"
+    android:layout_toRightOf="@+id/name"
     android:layout_marginLeft="15dp"
     android:gravity="center_horizontal"
-    android:text=" Alex J DOSTER"
+    android:text="ALEX J DOSTER"
     android:textSize="26sp"
-    android:textColor="#6200EA"
+    android:textColor="#ff1744"
     />
 <ImageView
-    android:id="@+id/dob"
-    android:layout_width="80"
-    android:layout_height="60"
-    android:src="@drawable/airbusa380"
-    android:layout_below="@id/name"
-    />
+        android:id="@+id/dob_29_09_84"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:src="@drawable/airbusa380"
+        android:layout_below="@id/name"
+        />
 
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_alignTop="@id/dob"
-    android:layout_alignBottom="@id/dob"
-    android:layout_aligntoRightOf="@id/dob"
+    android:layout_alignTop="@+id/dob_29_09_84"
+    android:layout_alignBottom="@+id/dob_29_09_84"
+    android:layout_toRightOf="@+id/dob_29_09_84"
     android:layout_marginLeft="15dp"
     android:gravity="center_horizontal"
     android:text="DOB 29/09/84"
     android:textSize="26sp"
-    android:textColor="#ffff00"
-    />
+    android:textColor="#ff1744"
+
+
+
+
+
+
+
+        />
+
 </RelativeLayout>

@@ -2,32 +2,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#800080"
+    android:background="#E91E63"
     >
+
+
 
     <TextView
         android:id="@+id/lblQuestion"
-        android:text="Is this the flag for Canada"
+        android:text="Is this applepay?"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:gravity="center"
-        android:background="#D50000"
+        android:background="#263238"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
+        android:textColor="#76FF03"
+
+
         />
-
-
     <ImageView
-        android:id="@+id/imgPicture"
-        android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:src="@drawable/canadianflag"
-        android:layout_above="@+id/lblQuestion"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="40dp"
-        />
 
+        android:id="@+id/applepay"
+        android:layout_width="260dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/applepay"
+        />
     <Button
         android:id="@+id/btnTrue"
         android:layout_width="160dp"
@@ -42,18 +43,18 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="36dp"
         android:background="#43ff1a" />
+    <Button
+        android:id="@+id/btnFalse"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:text="No"
+        android:textSize="26sp"
+        android:padding="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignTop="@+id/btnTrue"
+        android:layout_toEndOf="@+id/btnTrue"
+        android:background="#2196F3" />
 
-        <Button
-            android:id="@+id/btnFalse"
-            android:layout_width="160dp"
-            android:layout_height="70dp"
-            android:text="No"
-            android:textSize="26sp"
-            android:padding="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_alignTop="@+id/btnTrue"
-            android:layout_toEndOf="@+id/btnTrue"
-            android:background="#11fdff" />
 
 </RelativeLayout>

@@ -2,13 +2,14 @@ package com.question.alexdoster.mygeographyapp;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
 
@@ -18,22 +19,26 @@ public class MainActivity extends Activity {
     private TextView lblQuestion;
     private ImageView imgPicture;
 
+    private List<QuestionObject>questions;
+    private int index;
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         // connect variables to interface items
-        btnTrue=(Button)findViewById(R.id.btnTrue);
-        btnFalse=(Button)findViewById(R.id.btnFalse);
-        lblQuestion =(TextView)findViewById(R.id.lblQuestion);
-        imgPicture=(ImageView)findViewById(R.id.imgPicture);
+        btnTrue = (Button) findViewById(R.id.btnTrue);
+        btnFalse = (Button) findViewById(R.id.btnFalse);
+        lblQuestion = (TextView) findViewById(R.id.lblQuestion);
+        imgPicture = (ImageView) findViewById(R.id.imgPicture);
 
         //set geography question
         lblQuestion.setText("is this the flag for Canada");
 
         //set image Picture
         imgPicture.setImageResource(R.drawable.canadianflag);
+
+        index = 0;
 
         //onclick listners
         btnTrue.setOnClickListener(new View.OnClickListener() {
@@ -47,8 +52,32 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "wrong!!", Toast.LENGTH_SHORT).show();
+
+
             }
         });
+        generateQuestions();
+
+    }
+        private void generateQuestions(){
+
+        questions=new ArrayList<>();
+
+        questions.add(new QuestionObject("Is this the flag of canada,false,R.drawable.canadianflag "));
+        questions.add(new QuestionObject("Is this Aircraft an airbusa380,true,R.drawable.airbusa380"));
+        questions.add(new QuestionObject("Is this payment sytem known as apple pay,false,R.drawable.applepay"));
+        questions.add(new QuestionObject("Is this aircraft a boeing747,true,R.drawable.boeing747"));
+        questions.add(new QuestionObject("Where is the eiffeltower,false,R.drawable.eiffeltower"));
+        questions.add(new QuestionObject("Is this plane made in russia,true,R.drawable.russiancargoplane"));
+        questions.add(new QuestionObject("who makes this car,false,R.drawable.nissanskylinenismo"));
+        questions.add(new QuestionObject("which is the film that bumblebee the car starred in,true,R.drawable.bumblebee"));
+        questions.add(new QuestionObject("who makes this car,true,R.drawable.mercedes"));
+        questions.add(new QuestionObject("what is this tower called,false,R.drawable.leaningtowerofpisa"));
+
+    }
+
+    private void setUpQuestion(){
+
 
 }
 }
