@@ -27,4 +27,8 @@ public class QuestionObject {
     public int getPicture(){
         return picture;
     }
+
+    public static int get(int index) {
+        return index;
+    }
 }

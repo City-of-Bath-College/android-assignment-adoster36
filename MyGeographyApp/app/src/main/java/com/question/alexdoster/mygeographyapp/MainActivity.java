@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class MainActivity extends Activity {
 
     //variables go here
@@ -20,7 +19,12 @@ public class MainActivity extends Activity {
     private ImageView imgPicture;
 
     private List<QuestionObject>questions;
+
+    private QuestionObject currentQuestions;
     private int index;
+    private int score;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +43,7 @@ public class MainActivity extends Activity {
         imgPicture.setImageResource(R.drawable.canadianflag);
 
         index = 0;
+        score = 0;
 
         //onclick listners
         btnTrue.setOnClickListener(new View.OnClickListener() {
@@ -63,14 +68,14 @@ public class MainActivity extends Activity {
 
         questions=new ArrayList<>();
 
-        questions.add(new QuestionObject("Is this the flag of canada,false,R.drawable.canadianflag "));
-        questions.add(new QuestionObject("Is this Aircraft an airbusa380,true,R.drawable.airbusa380"));
-        questions.add(new QuestionObject("Is this payment sytem known as apple pay,false,R.drawable.applepay"));
-        questions.add(new QuestionObject("Is this aircraft a boeing747,true,R.drawable.boeing747"));
-        questions.add(new QuestionObject("Where is the eiffeltower,false,R.drawable.eiffeltower"));
-        questions.add(new QuestionObject("Is this plane made in russia,true,R.drawable.russiancargoplane"));
-        questions.add(new QuestionObject("who makes this car,false,R.drawable.nissanskylinenismo"));
-        questions.add(new QuestionObject("which is the film that bumblebee the car starred in,true,R.drawable.bumblebee"));
+        questions.add(new QuestionObject("Is this the flag of canada,true,R.drawable.canadianflag "));
+        questions.add(new QuestionObject("Is this Aircraft an airbusa380,false,R.drawable.airbusa380"));
+        questions.add(new QuestionObject("Is this payment sytem known as apple pay,true,R.drawable.applepay"));
+        questions.add(new QuestionObject("Is this aircraft a boeing747,false,R.drawable.boeing747"));
+        questions.add(new QuestionObject("Where is the eiffeltower,true,R.drawable.eiffeltower"));
+        questions.add(new QuestionObject("Is this plane made in russia,false,R.drawable.russiancargoplane"));
+        questions.add(new QuestionObject("who makes this car,true,R.drawable.nissanskylinenismo"));
+        questions.add(new QuestionObject("which is the film that bumblebee the car starred in,false,R.drawable.bumblebee"));
         questions.add(new QuestionObject("who makes this car,true,R.drawable.mercedes"));
         questions.add(new QuestionObject("what is this tower called,false,R.drawable.leaningtowerofpisa"));
 
@@ -78,6 +83,28 @@ public class MainActivity extends Activity {
 
     private void setUpQuestion(){
 
+        currentQuestions=questions.get(index);
 
+        lblQuestion.setText((currentQuestions.getquestion());
+        imgPicture.setImageResource(currentQuestions.getPicture());
+
+        index++
+        }
+    private void determineButtonPress(boolean answer){
+
+        boolean expectedAnswer = currentQuestions.isAnswer();
+
+        if (answer == expectedAnswer){
+            //you were right!!
+            Toast.makeText(mainactivity.this,"correct", Toast.LENGTH_SHORT).show();
+        }else{
+            // you were wrong!!
+
+            Toast.makeText(mainActivity.this,"correct", Toast.LENGTH_SHORT).SHOW();
+            switch (score++) {
+            }
+        }
+
+        setUpQuestion();
 }
 }
