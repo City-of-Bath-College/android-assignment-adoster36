@@ -2,6 +2,7 @@ package com.question.alexdoster.mygeographyapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -85,10 +86,10 @@ public class MainActivity extends Activity {
 
         currentQuestions=questions.get(index);
 
-        lblQuestion.setText((currentQuestions.getquestion());
+        lblQuestion.setText(currentQuestions.getquestion());
         imgPicture.setImageResource(currentQuestions.getPicture());
 
-        index++
+        index++;
         }
     private void determineButtonPress(boolean answer){
 
@@ -96,15 +97,23 @@ public class MainActivity extends Activity {
 
         if (answer == expectedAnswer){
             //you were right!!
-            Toast.makeText(mainactivity.this,"correct", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,"correct", Toast.LENGTH_SHORT).show();
         }else{
             // you were wrong!!
 
-            Toast.makeText(mainActivity.this,"correct", Toast.LENGTH_SHORT).SHOW();
-            switch (score++) {
-            }
+            Toast.makeText(MainActivity.this,"correct", Toast.LENGTH_SHORT).show();
+            score++;
+
+        if(index == question.size()){
+            //they have used all their questions it's now time to end the game
+            
         }
 
-        setUpQuestion();
+        }
+
+
+
+
+
 }
 }
