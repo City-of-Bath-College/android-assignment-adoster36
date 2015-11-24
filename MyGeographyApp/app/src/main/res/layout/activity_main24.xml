@@ -2,33 +2,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#80CBC4"
-   >
+    android:background="#1B5E20"
+    >
+
 
 
     <TextView
         android:id="@+id/lblQuestion"
-        android:text="Is this a Boeing747"
+        android:text="Is this a nissanskylinenismo?"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:gravity="center"
-        android:background="#2196F3"
+        android:background="#263238"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
+        android:textColor="#D500F9"
+
+
         />
     <ImageView
-        android:id="@+id/imgPicture"
-        android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:src="@drawable/boeing747"
-        android:layout_above="@+id/lblQuestion"
+
+        android:id="@+id/applepay"
+        android:layout_width="260dp"
+        android:layout_height="220dp"
         android:layout_centerHorizontal="true"
-        android:layout_margin="40dp"
+        android:src="@drawable/nissanskylinenismo"
         />
     <Button
         android:id="@+id/btnTrue"
-        android:layout_width="160dp"
+        android:layout_width="150dp"
         android:layout_height="70dp"
         android:text="Yes"
         android:textSize="26sp"
@@ -39,11 +42,10 @@
         android:layout_below="@+id/lblQuestion"
         android:layout_alignParentStart="true"
         android:layout_marginStart="36dp"
-        android:background="#43ff1a"
-        />
+        android:background="#43ff1a" />
     <Button
         android:id="@+id/btnFalse"
-        android:layout_width="160dp"
+        android:layout_width="150dp"
         android:layout_height="70dp"
         android:text="No"
         android:textSize="26sp"
@@ -52,8 +54,7 @@
         android:layout_marginRight="30dp"
         android:layout_alignTop="@+id/btnTrue"
         android:layout_toEndOf="@+id/btnTrue"
-        android:background="#00E676"
-        />
+        android:background="#8E24AA" />
 
 
 </RelativeLayout>

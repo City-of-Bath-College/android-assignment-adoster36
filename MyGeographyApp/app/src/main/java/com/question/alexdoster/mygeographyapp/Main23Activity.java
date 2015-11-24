@@ -91,20 +91,27 @@ public class MainActivity extends Activity {
 
         index++;
     }
-    private void determineButtonPress(boolean answer) {
+    private boolean determineButtonPress(boolean answer){
 
         boolean expectedAnswer = currentQuestions.isAnswer();
 
-        if (answer == expectedAnswer) {
+        if (answer == expectedAnswer){
             //you were right!!
-            Toast.makeText(MainActivity.this, "correct", Toast.LENGTH_SHORT).show();
-        } else {
+            Toast.makeText(MainActivity.this,"correct", Toast.LENGTH_SHORT).show();
+        }else{
             // you were wrong!!
 
-            Toast.makeText(MainActivity.this, "correct", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,"correct", Toast.LENGTH_SHORT).show();
             score++;
 
-            return super.onOptionsItemSelected(item);
-
+            if (super.onOptionsItemSelected(item)) return true;
+            else {
+                return false;
+            }
         }
+        return expectedAnswer;
+    } static {
+
     }
+}
+}

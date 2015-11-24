@@ -91,7 +91,7 @@ public class MainActivity extends Activity {
 
         index++;
     }
-    private void determineButtonPress(boolean answer){
+    private boolean determineButtonPress(boolean answer){
 
         boolean expectedAnswer = currentQuestions.isAnswer();
 
@@ -104,6 +104,13 @@ public class MainActivity extends Activity {
             Toast.makeText(MainActivity.this,"correct", Toast.LENGTH_SHORT).show();
             score++;
 
-        return super.onOptionsItemSelected(item);
+            if (super.onOptionsItemSelected(item)) return true;
+            else {
+                return false;
+            }
+    }
+        return expectedAnswer;
+    } static {
+
     }
 }
