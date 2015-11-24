@@ -40,6 +40,10 @@
             android:name=".Main24Activity"
             android:label="@string/title_activity_main24" >
         </activity>
+        <activity
+            android:name=".activity_main"
+            android:label="@string/title_activity_activity_main" >
+        </activity>
     </application>
 
 </manifest>
