@@ -104,9 +104,9 @@ public class MainActivity extends Activity {
             Toast.makeText(MainActivity.this,"correct", Toast.LENGTH_SHORT).show();
             score++;
 
-        if(index == question.size()){
+
             //they have used all their questions it's now time to end the game
-            
+
         }
 
         }
