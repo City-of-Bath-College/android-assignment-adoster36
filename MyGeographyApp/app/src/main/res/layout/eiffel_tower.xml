@@ -1,34 +1,36 @@
 
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03A9F4"
+    android:background="#00838F"
     >
 
 
 
     <TextView
         android:id="@+id/lblQuestion"
-        android:text="Is this Bumblebee from transformers ?"
+        android:text="Is this the Eiffel Tower ?"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:gravity="center"
-        android:background="#CDDC39"
+        android:background="#4CAF50"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:textColor="#E91E63"
+        android:textColor="#E53935"
 
 
         />
     <ImageView
 
-        android:id="@+id/bumblebee"
+        android:id="@+id/eiffeltower"
         android:layout_width="260dp"
         android:layout_height="220dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/bumblebee"
+        android:src="@drawable/eiffeltower"
         />
     <Button
         android:id="@+id/btnTrue"
@@ -43,19 +45,19 @@
         android:layout_below="@+id/lblQuestion"
         android:layout_alignParentStart="true"
         android:layout_marginStart="36dp"
-        android:background="#18FFFF" />
+        android:background="#1DE9B6" />
     <Button
         android:id="@+id/btnFalse"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:text="No"
+        android:text="no"
         android:textSize="26sp"
         android:padding="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_alignTop="@+id/btnTrue"
         android:layout_toEndOf="@+id/btnTrue"
-        android:background="#880E4F" />
+        android:background="#FFC107" />
 
 
 </RelativeLayout>

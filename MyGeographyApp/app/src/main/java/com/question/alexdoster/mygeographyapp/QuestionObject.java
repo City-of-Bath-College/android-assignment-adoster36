@@ -10,12 +10,14 @@ public class QuestionObject {
     private int picture;
 
 
-    public QuestionObject(String question){
+    public QuestionObject(String question, boolean answer, int picture){
 
       this.question=question;
       this.answer=answer;
       this.picture=picture;
     }
+
+
     public String getquestion() {
         return question;
     }
