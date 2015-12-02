@@ -7,6 +7,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -103,7 +104,7 @@ public class activity_main extends Activity {
     }
 
 
-    private void setUpSingleQuestion(){
+    private void setUpSingleQuestion() {
 
         currentQuestion = questions.get(index);
 
@@ -117,28 +118,24 @@ public class activity_main extends Activity {
         //on
         index++;
         //todo check if that index is too big
+    }
 
-        //onclick listners
-        btnTrue.setOnClickListener(new OnClickListener(){
-            @Override
-            public void onClick(View v) {
 
-            }
-        }
 
     private void determineIfUserIsCorrect(boolean theirAnswer){
 
+        //you are wrong!
+        //e.g. they pick true, answer is true -> they are correct!
+//e.g. they pick false, answer is false -> they are wrong
         if (theirAnswer == currentQuestion.isAnswer()){
-            //e.g. they pick true, answer is true -> they are correct!
-        } else{
-            //they are wrong!
-            btnTrue.setOnClickListener(new OnClickListener(){
-                @Override
-            public void onClick(View v) {
 
-                                           }
-
+        } else {
+            Toast.makeText(activity_main.this, "wrong", Toast.LENGTH_SHORT).show();
         }
+        {
+             Toast.makeText(activity_main.this,"Correct",Toast.LENGTH_SHORT) .show();
+        }
+
 
 
         setUpSingleQuestion();
